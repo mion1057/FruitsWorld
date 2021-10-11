@@ -5,7 +5,7 @@ li {list-style: none;}
 .hidden { position: absolute; left: -9999px;}
 main { min-width: 1280px;}
 /*  header */
-#header { overflow: hidden; width: 100%; height: 100px; margin: 0 auto; }
+#header { overflow: hidden; width: 1280px; height: 100px; margin: 0 auto; }
 
 #header h1 { width: 170px; height: 70px; float: left;}
 
@@ -18,7 +18,7 @@ main { min-width: 1280px;}
 #gnb li { float: left; width: 150px; padding-top: 30px; text-align: center;}
 #gnb li a { display: block; height: 50px; font-size: 20px;}
 /* client */
-#userWrap { padding: 30px 10px; }
+#userWrap {  position:absolute; right: 100px; padding: 30px 10px; float:left; }
 #userWrap .login { float: left; font-size: 20px; padding-right: 10px;}
 #userWrap .login a { padding-left: 10px;}
 #userWrap .user { padding-left: 15px;  }
@@ -69,13 +69,51 @@ main { min-width: 1280px;}
 
 
 /* 이달의 핫픽스 */
-#hotpics { width: 1000px; height: 500px; margin: 0 auto; }
-#hotWrap { position: relative; width: 500px;
-           margin: 0 auto; padding: 50px 50px 0;}
-#hotWrap .hotNo1 { width: 320px; height: 500px; margin-right: 20px;   }
-#hotWrap .hotNo2 { width: 320px; height: 500px; margin-right: 20px;  }
-#hotWrap .hotNo3 { width: 320px; height: 500px; margin-right: 20px;  }
+#hotpics { overflow: hidden; width: 900px; height: 500px; margin: 0 auto;}
+#hotpics h2 { text-align: center; padding-top: 40px;}
+#hotpics p { text-align: center; padding-top: 20px;}
 
-.hotNo1 a { background: url(../img/) no-repeat center / cover;}
-.hotNo2 a { background: url(../img/) no-repeat center / cover;}
-.hotNo3 a { background: url(../img/) no-repeat center / cover;}
+#hotWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; padding-top: 70px;}
+#hotWrap .hotNo { float: left; padding-left: 20px; }
+#hotWrap .hotNo a { display: block; width: 250px; height:250px; text-indent: -9999px; border-radius: 10%;}
+#hotWrap dt { font-size: 12px;}
+
+/* 국내 제철과일  */
+
+#nation { overflow: hidden; width: 1000px; height: 500px; margin: 0 auto;}
+#nation h2 { text-align: center; padding-top: 40px;}
+#nation p { text-align: center; padding-top: 20px;}
+#nationWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; padding-top: 70px;}
+#nationWrap .nateNo { float: left; padding-left: 20px; }
+#nationWrap .nateNo a { display: block; width: 250px; height:250px; text-indent: -9999px; border-radius: 10%;}
+#nationWrap .nateNo dt { font-size: 12px;}
+
+#foreign { overflow: hidden; width: 1000px; height: 500px; margin: 0 auto;}
+#foreign h2 { text-align: center; padding-top: 40px;}
+#foreign p { text-align: center; padding-top: 20px;}
+#foreWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; padding-top: 70px;}
+#foreWrap .foreNo { float: left; padding-left: 20px; }
+#foreWrap .foreNo a { display: block; width: 250px; height:250px; text-indent: -9999px; border-radius: 10%;}
+#foreWrap .foreNo dt { font-size: 12px;}
+
+#tropical { overflow: hidden; width: 1000px; height: 500px; margin: 0 auto;}
+#tropical h2 { text-align: center; padding-top: 40px;}
+#tropical p { text-align: center; padding-top: 20px;}
+#tropWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; padding-top: 70px;}
+#tropWrap .tropNo { float: left; padding-left: 20px; }
+#tropWrap .tropNo a { display: block; width: 250px; height:250px; text-indent: -9999px; border-radius: 10%;}
+#tropWrap .tropNo dt { font-size: 12px;}
+
+/* images */
+.hotpic1  { background: url(../img/applemango.jpg) no-repeat center / cover;}
+.hotpic2  { background: url(../img/gromichel.jpg) no-repeat center / cover;}
+.hotpic3  { background: url(../img/dodoria.jpeg) no-repeat center / cover;}
+.natepic1 { background: url(../img/apple.jpg) no-repeat center / cover;}
+.natepic2 { background: url(../img/pear.jpg) no-repeat center / cover;}
+.natepic3 { background: url(../img/geul.jpg) no-repeat center / cover;}
+.forepic1 { background: url(../img/grape.jpg) no-repeat center / cover;}
+.forepic2 { background: url(../img/blueberry.jpg) no-repeat center / cover;}
+.forepic3 { background: url(../img/pomegratel.jpg) no-repeat center / cover;}
+.tropic1 { background: url(../img/) no-repeat center / cover; }
+.tropic2 { background: url(../img/) no-repeat center / cover; }
+.tropic3 { background: url(../img/) no-repeat center / cover; }
