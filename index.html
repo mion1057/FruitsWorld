@@ -9,7 +9,7 @@
 
 <body>
   <header id="header">
-    <h1><a href="#">후르츠월드</a></h1>
+    <h1><a href="#">월드마켓</a></h1>
     <p class="hidden">국내/해외과일을 신선하게 판매하는 사이트입니다</p>
     <nav id="gnb">
       <ul id="gnbWrap">
@@ -22,11 +22,14 @@
     </nav>
     <div id="userWrap">
       <div class="login">
-        <a href="#">로그인</a>
-        <a href="#">회원가입</a>
+        <p class="hidden">고객 로그인 및 회원가입</p>
+        <ul>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
       </div>
       <div class="user">
-        <input type="text" class="searching" name="searcharea" value="검색바">
+        <input type="text" class="searching" name="searcharea" value="과일 검색 기능">
       </div>
     </div>
   </header>
@@ -94,6 +97,13 @@
         </div>
       </div>
     </section>
+    <!-- 레시피 이벤트 -->
+    <section id="receipt">
+      <a href="#">
+        <strong>제철 과일인 무화과의 할인 이벤트</strong>
+        <p>2021년 10월 제철과일이므로 한정 할인판매 합니다</p>
+      </a>
+    </section>
     <!-- 국내 과일 -->
     <section id="nation">
       <h2>국내 제철과일</h2>
@@ -102,6 +112,7 @@
       <div id="nationWrap">
         <div class="nateNo">
           <a class="natepic1" href="#">사과</a>
+          <span>1th</span>
           <dl>
             <dt>산들상회 경북 홍로사과 5kg</dt>
             <dd>50,000</dd>
@@ -109,6 +120,7 @@
         </div>
         <div class="nateNo">
           <a class="natepic2" href="#">배</a>
+          <span>2th</span>
           <dl>
             <dt>천안 당도선별 햇 왕배 1.8kg</dt>
             <dd>16,900</dd>
@@ -116,6 +128,7 @@
         </div>
         <div class="nateNo">
           <a class="natepic3" href="#">귤</a>
+          <p>3th</p>
           <dl>
             <dt>21년 수확 제주감귤 1box, 9kg 실중량</dt>
             <dd>21,900</dd>
@@ -182,53 +195,52 @@
       </div>
     </section>
     <section id="qna">
-      <strong>어떤 과일을 살지 모르시겠다고요? 알려드릴게요!</strong>
+      <strong>선택을 못하시겠다면, 골라드릴게요</strong>
       <p>자기에게 맞는 과일을 고른다면 과일이 좋아지실거예요</p>
       <div class="qnaWrap">
-
         <div class="step">
-          <a class="on" href="#">step1</a>
-          <a href="#">step2</a>
-          <a href="#">step3</a>
+          <ul>
+            <li><a href="#">step1</a></li>
+            <li><a href="#">step2</a></li>
+            <li><a href="#">step3</a></li>
+          </ul>
         </div>
-        <div class="taste">
-          <p>어떤 맛을 좋아하시나요?</p>
-          <input type="button" name="taste" value="달콤한 맛">
-          <input type="button" name="taste" value="새콤한 맛">
-        </div>
-        <div class="feelin">
-          <p>어떤 식감의 음식을 주로 찾으시나요?</p>
-          <input type="button" name="feelin" value="아삭아삭한">
-          <input type="button" name="feelin" value="쫄깃한">
-          <input type="button" name="feelin" value="설컹설컹한">
-        </div>
-        <div class="species">
-          <p>과일을 드신다고 하면 어떤곳의 과일을 드시고 싶으세요?</p>
-          <input type="button" name="species" value="국내과일">
-          <input type="button" name="species" value="해외과일">
-          <input type="button" name="species" value="열대과일">
+        <div id="option">
+          <div class="taste">
+            <p>어떤 맛을 좋아하시나요?</p>
+            <input type="button" name="taste" value="달콤한 맛">
+            <input type="button" name="taste" value="새콤한 맛">
+          </div>
+          <div class="feelin">
+            <p>어떤 식감의 음식을 주로 찾으시나요?</p>
+            <input type="button" name="feelin" value="아삭아삭한">
+            <input type="button" name="feelin" value="쫄깃한">
+            <input type="button" name="feelin" value="설컹설컹한">
+          </div>
+          <div class="species">
+            <p>과일을 드신다고 하면 어떤곳의 과일을 드시고 싶으세요?</p>
+            <input type="button" name="species" value="국내과일">
+            <input type="button" name="species" value="해외과일">
+            <input type="button" name="species" value="열대과일">
+          </div>
         </div>
       </div>
     </section>
-    <section id="receipt">
-      <a href="#">
-        <strong>제철 과일인 무화과의 할인 이벤트</strong>
-        <p>2021년 10월 제철과일이므로 한정 할인판매 합니다</p>
-      </a>
-    </section>
   </main>
-  <footer>
-    <p>copyright &copy; from worldmarket</p>
-    <address>
-      주소: 대구광역시 북구 동북로 119-3번지
-    </address>
-    <div id="sns">
-      <ul class="icon">
-        <li><a href="">facebook</a></li>
-        <li><a href="">instagram</a></li>
-        <li><a href="">twitter</a></li>
-        <li><a href="">google</a></li>
-      </ul>
+  <footer id="footer">
+    <div id="footerWrap">
+      <p>copyright &copy; from worldmarket</p>
+      <address>
+        주소: 대구광역시 북구 동북로 119-3번지
+      </address>
+      <div id="sns">
+        <ul class="icon">
+          <li class="facebook"><a href="#">facebook</a></li>
+          <li class="instagram"><a href="#">instagram</a></li>
+          <li><a href="#">twitter</a></li>
+          <li><a href="#">google</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>

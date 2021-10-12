@@ -1,30 +1,36 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 * { margin: 0; padding: 0;}
 a { text-decoration: none; color: #000;}
 li {list-style: none;}
 .hidden { position: absolute; left: -9999px;}
 main { min-width: 1280px;}
 /*  header */
-#header { overflow: hidden; width: 1280px; height: 100px; margin: 0 auto; }
+#header { width: 1280%; height: 100px; margin: 0 auto; float:left; }
 
-#header h1 { width: 170px; height: 70px; float: left;}
+#header h1 { width: 300px; height: 70px; float: left;}
 
 #header h1 a { display: block; width: 200px; height: 70px; text-indent: -9999px;
               background: url(../img/hg_logo.png) no-repeat center; padding: 10px 20px 10px 20px; }
 
 /* gnb */
-#gnb { width: 1000px; height: 70px; float: left;}
+#gnb { width: 800px; height: 70px; float: left;}
 #gnb ul { float: right; }
-#gnb li { float: left; width: 150px; padding-top: 30px; text-align: center;}
+#gnb li { float: left; width: 150px; padding-top: 30px; text-align: center; font-family: 'CookieRun-Regular'}
 #gnb li a { display: block; height: 50px; font-size: 20px;}
 /* client */
-#userWrap {  position:absolute; right: 100px; padding: 30px 10px; float:left; }
-#userWrap .login { float: left; font-size: 20px; padding-right: 10px;}
-#userWrap .login a { padding-left: 10px;}
+#userWrap {  width: 400px; height: 100px; float:left;  padding: 30px 10px;}
+#userWrap .login { float: left; font-size: 20px; padding-right: 20px;}
+#userWrap .login li { float: left; font-family:'CookieRun-Regular'; padding-left: 20px;}
 #userWrap .user { padding-left: 15px;  }
 /* event */
-#event { background: #b833ff; width: 100%; height: 500px; }
-#eventTime { position: relative; width: 1000px; height: 400px;  margin: 0 auto; top: calc(10% - 10px); }
+#event { background: #b833ff; width: 100%; height: 700px; }
+#eventTime { position: relative; width: 100%; height: 400px;  margin: 0 auto; top: calc(30% - 10px); }
 #eventList { background-color: #0c9000; }
 #eventList li { position: absolute; top: 0; left: 0; width: 100%; height: 400px;}
 
@@ -39,8 +45,8 @@ main { min-width: 1280px;}
             text-align: center; line-height: 100px;
             text-indent: -9999px;
              }
-#posBtn a.prev {  top: calc(50% - 170px); left: 150px; background: url(../img/main_arrow_left.png) no-repeat center / 70px; }
-#posBtn a.next {  top: calc(50% - 170px); right: 150px; background: url(../img/main_arrow_right.png) no-repeat center / 70px; }
+#posBtn a.prev {  top: calc(50% - 60px); left: 150px; background: url(../img/main_arrow_left.png) no-repeat center / 70px; }
+#posBtn a.next {  top: calc(50% - 60px); right: 150px; background: url(../img/main_arrow_right.png) no-repeat center / 70px; }
 /* 슬라이드 순서버튼 */
 #numBtn { position: absolute; left: calc(50% - 65px); bottom: 50px; z-index: 999; }
 #numBtn a { display: block; width: 20px; height: 20px; float: left;
@@ -72,8 +78,9 @@ main { min-width: 1280px;}
 #hotpics { overflow: hidden; width: 900px; height: 500px; margin: 0 auto;}
 #hotpics h2 { text-align: center; padding-top: 40px;}
 #hotpics p { text-align: center; padding-top: 20px;}
+#hotpics > a { display: block; position:relative; left:50px; width: 200px; height: 20px; margin: 30px auto;}
 
-#hotWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; padding-top: 70px;}
+#hotWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; }
 #hotWrap .hotNo { float: left; padding-left: 20px; }
 #hotWrap .hotNo a { display: block; width: 250px; height:250px; text-indent: -9999px; border-radius: 10%;}
 #hotWrap dt { font-size: 12px;}
@@ -83,7 +90,8 @@ main { min-width: 1280px;}
 #nation { overflow: hidden; width: 1000px; height: 500px; margin: 0 auto;}
 #nation h2 { text-align: center; padding-top: 40px;}
 #nation p { text-align: center; padding-top: 20px;}
-#nationWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; padding-top: 70px;}
+#nation > a { display: block; position:relative; left:50px; width: 200px; height: 20px; margin: 30px auto;}
+#nationWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto;}
 #nationWrap .nateNo { float: left; padding-left: 20px; }
 #nationWrap .nateNo a { display: block; width: 250px; height:250px; text-indent: -9999px; border-radius: 10%;}
 #nationWrap .nateNo dt { font-size: 12px;}
@@ -92,16 +100,18 @@ main { min-width: 1280px;}
 #foreign { overflow: hidden; width: 1000px; height: 500px; margin: 0 auto;}
 #foreign h2 { text-align: center; padding-top: 40px;}
 #foreign p { text-align: center; padding-top: 20px;}
-#foreWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; padding-top: 70px;}
+#foreign > a { display: block; position:relative; left:50px; width: 200px; height: 20px; margin: 30px auto;}
+#foreWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; }
 #foreWrap .foreNo { float: left; padding-left: 20px; }
 #foreWrap .foreNo a { display: block; width: 250px; height:250px; text-indent: -9999px; border-radius: 10%;}
 #foreWrap .foreNo dt { font-size: 12px;}
 
 /* 열대과일  */
-#tropical { overflow: hidden; width: 1000px; height: 500px; margin: 0 auto;}
+#tropical { overflow: hidden; width: 1000px; height: 500px; margin: 0 auto; padding-bottom: 50px;}
 #tropical h2 { text-align: center; padding-top: 40px;}
 #tropical p { text-align: center; padding-top: 20px;}
-#tropWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; padding-top: 70px;}
+#tropical > a { display: block; position:relative; left:50px; width: 200px; height: 20px; margin: 30px auto;}
+#tropWrap { overflow: hidden; width: 900px; height: 300px; margin: 0 auto; }
 #tropWrap .tropNo { float: left; padding-left: 20px; }
 #tropWrap .tropNo a { display: block; width: 250px; height:250px; text-indent: -9999px; border-radius: 10%;}
 #tropWrap .tropNo dt { font-size: 12px;}
@@ -116,14 +126,32 @@ main { min-width: 1280px;}
 .forepic1 { background: url(../img/grape.jpg) no-repeat center / cover;}
 .forepic2 { background: url(../img/blueberry.jpg) no-repeat center / cover;}
 .forepic3 { background: url(../img/pomegratel.jpg) no-repeat center / cover;}
-.tropic1 { background: url(../img/) no-repeat center / cover; }
-.tropic2 { background: url(../img/) no-repeat center / cover; }
-.tropic3 { background: url(../img/) no-repeat center / cover; }
+.tropic1 { background: rgba(213, 213, 213, 0.78) url(../img/dragonfruit2.png) no-repeat center / cover; }
+.tropic2 { background: rgba(213, 213, 213, 0.78) url(../img/sababanana.png) no-repeat center / 240px; }
+.tropic3 { background: rgba(213, 213, 213, 0.78) url(../img/jackfruit.png) no-repeat center / cover; }
 
-#qna { overflow: hidden; width: 1280px; height: 500px;  margin: 0 auto; }
-#qna p { text-align: center; padding-top: 20px;}
-#qnaWrap { overflow:hidden; width: 1280px; height: 500px; margin: 0 auto;}
-#qnaWrap .step a.on { color: #fc5045;}
-#qnaWrap input { width: 100px; height: 40px; background-color: #acacac; }
+#qna {  width: 800px; height: 500px; margin: 0 auto; padding-top: 50px; }
+#qna strong { text-align: center; display: block; position: relative; font-size: 24px; width: 600px; margin: 0 auto; }
+#qna > p { text-align: center; line-height: 100px;}
+.step { width: 800px; height: 70px;}
+.step ul { position: relative; left: 300px; }
+.step li { float: left; padding-left: 20px; }
+
+#option { display: block; }
+#option p { text-align: center;}
+#option input { position: relative; left: 200px; margin-top: 20px; width: 200px; height: 40px; }
 .feelin { opacity: 0;}
 .species { opacity: 0;}
+/* footer */
+#footer { width: 100%;height: 300px; background: rgb(129, 129, 129);}
+#footerWrap {
+  width: 880px;
+  height: 250px;
+  margin: 0 auto;
+  padding-top: 20px;
+  color: #fff;
+}
+#sns { }
+#sns ul { width: 500px;}
+#sns li { float: left; margin-left: 20px;  text-indent: -9999px; }
+#sns li a {}
