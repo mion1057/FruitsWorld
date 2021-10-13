@@ -79,3 +79,38 @@ $("#numBtn a").on('click', function() {
       }
   }
 })
+$(".thumb em").hide();
+$(".thumb a").on('click', function(e) {
+  let imgPath = $(this).attr("href")
+  let altText = $(this).attr('title')
+  $("#largeImg img").attr({ src: imgPath, alt: altText })
+  $("#caption").remove();
+  $("#largeImg").append("<div id='caption'>")
+  $('#caption').text($(this).next().text())
+               .animate({ top: -$("#caption").innerHeight() })
+
+
+  e.preventDefault();
+})
+
+$('.snb').hide();
+
+$('#gnbWrap li').on('mouseenter', function(){
+  $('.snb').not( $(this).children('.snb') ).hide()
+  $(this).children('.snb').stop().slideDown(400)
+})
+$('#gnbWrap li').on('mouseleave', function(){
+    $('.snb').stop().slideUp(400)
+})
+
+$(window).on('scroll', function() {
+    $('section').each(function(e){
+      if ( $(window).scrollTop() > $(this).position().top-700 ) {
+        $('strong').not(":animated").animate({ opacity: 1})
+        $(this).not(":animated").animate({ opacity: 1 }, 300)
+      }
+      else  {
+        $(this).not(":animated").animate({ opacity: 0 }, 300)
+      }
+    })
+})
